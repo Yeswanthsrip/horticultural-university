@@ -1,0 +1,24 @@
+# Netlify configuration for the Dr. Y.S.R. Horticultural University homepage.
+# Netlify detects Next.js automatically and applies its Next.js runtime
+# (server rendering, image optimisation via Netlify Image CDN, caching).
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+# Long-lived caching for static images in /public/img
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, must-revalidate"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
