@@ -378,7 +378,8 @@ export const viceChancellor = {
   name: { en: 'Dr. K. Dhanumjaya Rao', te: 'డా. కె. ధనుంజయ రావు' },
   designation: { en: 'Vice-Chancellor', te: 'ఉపకులపతి' },
   /** PLACEHOLDER — set to e.g. '/img/vice-chancellor.jpg' (portrait, 4:5) to show a photo. */
-  photo: null as string | null,
+  // photo: null as string | null,
+  photo: '/img/vice-chancellor.jpg' as string | null,
   // PLACEHOLDER message — replace with the official message.
   message: {
     en: 'Horticulture is the fastest-growing part of agriculture in Andhra Pradesh, and our university exists to make that growth sustainable and farmer-centred. I invite students, researchers and farmers to be part of our journey — learning in our classrooms, experimenting in our fields and taking proven technologies to every village.',
